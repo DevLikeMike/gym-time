@@ -11,12 +11,9 @@ const Navbar = styled.nav`
   height: 3rem;
   display: flex;
   justify-content: flex-end;
-  background-color: #fff;
+  background-color: #282828;
   box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
   z-index: 100;
-  @media (min-width: 768px) {
-    justify-content: center;
-  }
 `;
 
 const NavList = styled.ul`
@@ -26,27 +23,34 @@ const NavList = styled.ul`
   justify-content: center;
   align-items: center;
   gap: 10px;
+  margin-right: 3rem;
 `;
 
 const NavItem = styled.li`
   justify-content: center;
   align-items: center;
   list-style: none;
-  padding: 0 2rem;
-  font-size: 1.333rem;
   height: 80%;
   display: none;
   transition: background-color 0.3s ease;
+  border-radius: 3px;
+  color: #fff;
 
   &:hover {
-    background-color: #333;
-    color: #fff;
+    background-color: #d63101;
+    color: #333;
     box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
   }
 
   a {
+    display: flex;
+    align-items: center;
     text-decoration: none;
     color: inherit;
+    padding: 0 2rem;
+    font-size: 1.333rem;
+    height: 100%;
   }
 
   @media (min-width: 768px) {

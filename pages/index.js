@@ -1,12 +1,13 @@
+import Hero from "@/components/Hero";
+import StyledContainer from "@/components/StyledContainer";
+
 export default function Home() {
   return (
     <>
-      <main>
-        <h1>hellow world</h1>
-      </main>
-      <main>
-        <h1>hellow world</h1>
-      </main>
+      <Hero />
+      <StyledContainer>
+        <h2>hellow World</h2>
+      </StyledContainer>
     </>
   );
 }
