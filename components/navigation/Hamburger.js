@@ -4,7 +4,7 @@ const HamburgerContainer = styled.div`
   height: 2rem;
   width: 2rem;
   position: relative;
-  margin: auto 1rem;
+  margin: auto 0;
   cursor: pointer;
   display: none;
   z-index: 200;

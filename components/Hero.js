@@ -2,7 +2,7 @@ import styled from "styled-components";
 import StyledContainer from "./StyledContainer";
 
 const HeroSection = styled.section`
-  padding: 1rem 0;
+  padding: 1rem ${(props) => props.theme.standardPadding};
   background-color: #000000;
   color: #fff;
   position: relative;
@@ -13,8 +13,22 @@ const HeroSection = styled.section`
   background-size: cover;
   background-position: right center;
 
+  @media (max-width: 500px) {
+    padding: 1rem ${(props) => props.theme.mobilePadding};
+  }
+
   .hero--content {
-    max-width: 40rem;
+    max-width: 66rem;
+
+    h1 {
+      font-size: 6rem;
+      line-height: 0.75;
+      margin-bottom: 1.25rem;
+    }
+
+    p {
+      max-width: 40rem;
+    }
 
     @media (max-width: 900px) {
       max-width: 25rem;
@@ -33,10 +47,11 @@ export default function Hero() {
         <div className='hero--content'>
           <h1>Metro Fitness Gym</h1>
           <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-            Praesentium, laboriosam? Repellat, ratione. Eos ratione at rem,
-            doloremque maiores omnis ab deserunt aperiam in, dolores eaque
-            voluptatibus assumenda illum quas distinctio!
+            For 30 years Metro Fitness has lead the Columbus community in the
+            fitness industry. Visit any of our four locations for a fun,
+            friendly and inviting experience that caters to your fitness needs.
+            Come join our Metro Fitness family and thrive in an atmosphere that
+            is unparalleled to any other in Central Ohio.
           </p>
         </div>
       </StyledContainer>

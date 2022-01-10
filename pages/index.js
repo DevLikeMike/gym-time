@@ -1,13 +1,22 @@
 import Hero from "@/components/Hero";
-import StyledContainer from "@/components/StyledContainer";
+import Section from "@/components/StyledSection";
 
 export default function Home() {
   return (
     <>
       <Hero />
-      <StyledContainer>
-        <h2>hellow World</h2>
-      </StyledContainer>
+      <div>
+        <Section dark={true}>
+          <h2 className='text-center'>Turn Your New Years into Confetti!!!</h2>
+          <p className='text-center'>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Error,
+            incidunt? Eum illum dolor laboriosam nulla sed quia, itaque magni?
+            Laborum nihil quas dicta et eius cumque qui dolorem placeat.
+            Cupiditate debitis nam rem iste autem, pariatur porro aliquam
+            voluptates possimus laboriosam, nisi, dignissimos commodi non!
+          </p>
+        </Section>
+      </div>
     </>
   );
 }

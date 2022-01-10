@@ -24,6 +24,10 @@ main {
   color: color(white);
 }
 
+p {
+  line-height: 1.4;
+}
+
 li {
   list-style: none;
 }
@@ -67,6 +71,10 @@ a {
 
 .m-1 {
   margin: 1rem;
+}
+
+.py-1 {
+  padding: 1rem 0 0;
 }
 
 .light-blue {

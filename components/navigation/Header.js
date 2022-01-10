@@ -23,7 +23,11 @@ const NavList = styled.ul`
   justify-content: center;
   align-items: center;
   gap: 10px;
-  margin-right: 3rem;
+  margin-right: ${(props) => props.theme.standardPadding};
+
+  @media (max-width: 768px) {
+    margin-right: ${(props) => props.theme.mobilePadding};
+  }
 `;
 
 const NavItem = styled.li`

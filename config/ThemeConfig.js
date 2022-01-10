@@ -8,4 +8,6 @@ export const theme = {
   darkGray: "#333333",
   white: "#ffffff",
   offWhite: "#e6e6e6",
+  standardPadding: "3rem",
+  mobilePadding: "1rem",
 };
