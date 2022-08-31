@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 // Component imports
 import Hamburger from "./Hamburger";
 import SideNav from "./SideNav";
@@ -7,43 +8,48 @@ import SideNav from "./SideNav";
 import styled from "styled-components";
 
 const Navbar = styled.nav`
+  padding: 0 ${(props) => props.theme.standardPadding};
   width: 100vw;
   height: 3rem;
   display: flex;
-  justify-content: flex-end;
-  background-color: #282828;
+  justify-content: space-between;
+  background-color: #f2ab5e;
   box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
   z-index: 100;
+
+  @media (max-width: 768px) {
+    padding: 0 ${(props) => props.theme.mobilePadding};
+  }
+`;
+
+const LogoContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  object-fit: contain;
 `;
 
 const NavList = styled.ul`
   height: 3rem;
-  color: #333;
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
   gap: 10px;
-  margin-right: ${(props) => props.theme.standardPadding};
-
-  @media (max-width: 768px) {
-    margin-right: ${(props) => props.theme.mobilePadding};
-  }
 `;
 
 const NavItem = styled.li`
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
   list-style: none;
   height: 80%;
   display: none;
   transition: background-color 0.3s ease;
   border-radius: 3px;
-  color: #fff;
+  color: #000112;
 
   &:hover {
-    background-color: #d63101;
-    color: #333;
-    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+    color: #fff;
     cursor: pointer;
   }
 
@@ -71,6 +77,9 @@ export default function Header() {
 
   return (
     <Navbar>
+      <LogoContainer>
+        <Image src='/imgs/logo.png' width='275' height='48' />
+      </LogoContainer>
       <NavList>
         <NavItem>
           <Link href='/'>

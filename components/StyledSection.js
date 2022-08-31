@@ -15,9 +15,9 @@ const Section = styled.section`
   }
 `;
 
-function StyledSection({ children, dark }) {
+function StyledSection({ children, color }) {
   return (
-    <Section className={dark ? "section-black" : "section-white"}>
+    <Section className={color ? "section-standard" : "section-white"}>
       {children}
     </Section>
   );

@@ -1,11 +1,11 @@
-.section-black {
-  color: colors(white);
-  background-color: #000;
+.section-standard {
+  color: color(white);
+  background-color: color(primaryDark);
   width: 100%;
 }
 
 .section-white {
   color: #000;
-  background-color: colors(white);
+  background-color: color(white);
   width: 100%;
 }

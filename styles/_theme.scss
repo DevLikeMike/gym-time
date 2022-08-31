@@ -5,6 +5,8 @@ $colors: (
   dark-gray: hsl(0, 0%, 20%),
   white: hsl(0, 0%, 100%),
   off-white: hsl(0, 0%, 90%),
+  primary: hsl(31, 85%, 66%),
+  primaryDark: hsl(31, 81%, 58%),
 );
 
 @function color($color-name) {
